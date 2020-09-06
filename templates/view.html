@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+* {box-sizing: border-box;}
+
+body,html{
+height:100%;
+}
+
+body {font-family: Verdana, sans-serif;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.right{
+    position:absolute;
+    right:20px;
+    top:40px;
+    display:inline-block;
+}
+
+
+.navbar{display:inline-block;}
+
+.navbar li{
+display:inline-block;
+font size:25px;
+}
+
+.navbar li a{
+text-decoration:none;
+color:black;
+padding: 30px 20px;
+}
+
+.navbar li a:hover, .navbar li a.active{
+text-decoration:underline;
+}
+
+table{
+  border-collapse: collapse;
+  width:100%;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color:lavender;}
+
+.intro{
+  padding: 30 px;
+  text-align: left;
+  font-size: 27px;
+  color:indigo;
+  text-decoration:bold;
+}
+.pack {
+  background-color: gainsboro;
+  color: maroon;
+  margin: 20px;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+    <div class="pack">
+        <p class="intro"> User's Registered </p>
+        <div class="right">
+            <ul class ="navbar">
+            <li><a href="home">Home</a></li>
+            <li><a href="register">Registration</a></li>
+            <li><a href="trainer">Trainer Details</a></li>
+            <li><a href="package">Package</a></li>
+            <li><a href="about">About us</a></li>
+            </ul>
+        </div>
+
+    <table>
+        <tr><th>Name</th><th>Age</th><th>Email</th><th>Gender</th><th>Training</th></tr></tr>
+
+        {% for row in rows %}
+            <tr><td>{{row["name"]}}</td><td>{{row["age"]}}</td><td>{{row["email"]}}</td><td>{{row["gender"]}}</td><td>{{row["training"]}}</td><td></tr>
+        {% endfor %}
+    </table>
+    </div>
+
+
+</body>
+</html>
