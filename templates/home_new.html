@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+{% block content %}
+	<div class="slideshow-container">
+
+		<div class="mySlides"><image src = "{{ url_for('static',filename='images/homegym.jpg') }}" style="width:100%"></div>
+
+		<div class="mySlides"><image src = "{{ url_for('static',filename='images/homegym4.png') }}" style="width:100%"></div>
+
+		<div class="mySlides"><image src = "{{ url_for('static',filename='images/homegym11.jpg') }}" style="width:100%"></div>
+
+		<div class="mySlides"><image src = "{{ url_for('static',filename='images/homegym1.jpg') }}" style="width:100%"></div>
+
+	</div>
+
+		<br>
+
+		<div style="text-align:center">
+		  <span class="dot"></span>
+		  <span class="dot"></span>
+		  <span class="dot"></span>
+		  <span class="dot"></span>
+		</div>
+
+		<p class="content">
+			<br>" Explore & Book Gyms & Fitness Classes
+			<br>Created to help you live a better, happier and healthier life "<br>
+		</p>
+
+		<div class="button1">
+		<a href="register" class="button" >REGISTRATION </a>
+		</div>
+
+		<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  for (i = 0; i < slides.length; i++) {
+		    slides[i].style.display = "none";
+		  }
+		  slideIndex++;
+		  if (slideIndex > slides.length) {slideIndex = 1}
+		  for (i = 0; i < dots.length; i++) {
+		    dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block";
+		  dots[slideIndex-1].className += " active";
+		  setTimeout(showSlides, 4000); // Change image every 2 seconds
+		}
+		</script>
+{% endblock content%}
+</body>
+</html>
