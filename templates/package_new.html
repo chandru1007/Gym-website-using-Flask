@@ -1,0 +1,160 @@
+<!DOCTYPE html><html>
+<head>
+<style>
+
+* {box-sizing: border-box;}
+
+body {font-family: Verdana, sans-serif;
+}
+
+
+
+.intro{
+  padding-left: 300px;
+  text-align: left;
+  font-size: 30px;
+  color:grey;
+  text-decoration:bold;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.bg1 {
+  background-color: snow;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.right{
+	position:absolute;
+	right:20px;
+	top:40px;
+	display:inline-block;
+}
+
+
+.navbar{display:inline-block;}
+
+.navbar li{
+display:inline-block;
+font size:50px;
+}
+
+.navbar li a{
+text-decoration:none;
+color:black;
+padding: 30px 20px;
+}
+
+.navbar li a:hover, .navbar li a.active{
+text-decoration:underline;
+}
+
+table{
+  border-collapse: collapse;
+  width:100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 3px solid #ddd;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+.pack {
+  background-color: grey;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+}
+
+.pack1 {
+  background-color: lightcyan;
+  color: black;
+  margin: 5px;
+  padding: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg1">
+
+<p class="intro"><br> PLANS & PRICING<br></p>
+
+<div class="bg">
+
+		<div class="right">
+			<ul class ="navbar">
+		   	<li><a href="home">Home</a></li>
+		   	<li><a href="register">Registration</a></li>
+	       	<li><a href="trainer">Trainer Details</a></li>
+		   	<li><a href="package">Package</a></li>
+		   	<li><a href="about">About us</a></li>
+		   	<li><a href="view">View User's</a></li>
+			</ul>
+		</div>
+
+	{% block content %}
+
+	<div class ="pack1">
+	<table>
+	  <tr>
+	    <th>&nbsp;&nbsp;&nbsp;PACKAGE ID</th>
+	    <th>TRAINERS</th>
+	    <th>CATAGORIES</th>
+	  </tr>
+	  <tr>
+	    <td>&nbsp;&nbsp;&nbsp;E01</td>
+	    <td>Jessy &nbsp; and &nbsp;Michel </td>
+	    <td>Body Building</td>
+	  </tr>
+	  <tr>
+	    <td>&nbsp;&nbsp;&nbsp;E02</td>
+	    <td>Vetrimaran &nbsp; and &nbsp;Avanthika</td>
+	    <td>Body Maintaining</td>
+	  </tr>
+	  <tr>
+	     <td>&nbsp;&nbsp;&nbsp;E03</td>
+	    <td>Griffin , Jagdeesh &nbsp; and &nbsp;Amirtha Iyer</td>
+	    <td>Weight Loss</td>
+	  </tr>
+	</table>
+
+	</div>
+
+
+	<div class="pack">
+	  <h2>Body Building</h2>
+	  <p>&nbsp; &nbsp; &nbsp; &nbsp; 1  Month Pack &nbsp; &nbsp;   7 am - 9 am  &nbsp; &nbsp;  5 pm - 6 pm     &nbsp; &nbsp; RS.600<br>
+	     &nbsp; &nbsp; &nbsp; &nbsp; 3  Month Pack &nbsp; &nbsp;   7 am - 9 am  &nbsp; &nbsp;  5 pm - 6 pm     &nbsp; &nbsp; RS.1500
+	  </p>
+	</div>
+
+	<div class="pack">
+	  <h2>Weight Loss</h2>
+	  <p>&nbsp; &nbsp; &nbsp; &nbsp; 1  Month Pack &nbsp; &nbsp;   6 am - 8 am  &nbsp; &nbsp;  5 pm - 6 pm     &nbsp; &nbsp; RS.500<br>
+	     &nbsp; &nbsp; &nbsp; &nbsp; 3  Month Pack &nbsp; &nbsp;   6 am - 8 am  &nbsp; &nbsp;  5 pm - 6 pm     &nbsp; &nbsp; RS.1300
+	  </p>
+	</div>
+
+	<div class="pack">
+	  <h2>Body Maintaining</h2>
+	  <p>&nbsp; &nbsp; &nbsp; &nbsp; 1  Month Pack &nbsp; &nbsp;   7 am - 9 am  &nbsp; &nbsp;  5 pm - 6 pm     &nbsp; &nbsp; RS.400<br>
+	     &nbsp; &nbsp; &nbsp; &nbsp; 3  Month Pack &nbsp; &nbsp;   7 am - 9 am  &nbsp; &nbsp;  5 pm - 6 pm     &nbsp; &nbsp; RS.1000
+	  </p>
+	</div>
+	{% endblock content%}
+	</div>
+	</div>
+
+</body>
+</html>
