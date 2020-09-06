@@ -2,13 +2,7 @@ from flask import *
 from flask_mysqldb import MySQL
 
 app=Flask(__name__)
-
-app.config['MYSQL_USER']         =  'chandru17L109'
-app.config['MYSQL_PASSWORD']     =  'lammi@10'
-app.config['MYSQL_HOST']         =  'chandru17L109.mysql.pythonanywhere-services.com'
-app.config['MYSQL_DB']           =  'chandru17L109$yuki'
-app.config['MYSQL_CURSORCLASS']  =  'DictCursor'
-
+#database username,password
 mysql=MySQL(app)
 
 @app.route("/")
