@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+* {box-sizing: border-box;}
+
+body {font-family: Verdana, sans-serif;}
+
+img {vertical-align: middle;}
+
+
+.intro{
+  padding-top:60px;
+  padding-left: 300px;
+  text-align: left;
+  font-size: 25px;
+  color:midnightblue;
+  text-decoration:bold;
+}
+
+.right{
+	position:absolute;
+	right:20px;
+	top:20px;
+	display:inline-block;
+}
+
+
+.navbar{display:inline-block;}
+
+.navbar li{
+display:inline-block;
+font size:25px;
+}
+
+.navbar li a{
+text-decoration:none;
+color:black;
+padding: 30px 20px;
+}
+
+.navbar li a:hover, .navbar li a.active{
+text-decoration:underline;
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+.content{
+  text-align: center;
+  font-size: 20px;
+  color:grey;
+  text-decoration:bold;
+}
+
+.button1{
+	text-align: center;
+}
+
+.button{
+   background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 2px;
+  cursor: pointer;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+}
+</style>
+</head>
+<body>
+	{% block content %}
+	<div>
+		<p class="intro"></p>
+		<div class="right">
+			<ul class ="navbar">
+		   	<li><a href="home">Home</a></li>
+		   	<li><a href="register">Registration</a></li>
+	       	<li><a href="trainer">Trainer Details</a></li>
+		   	<li><a href="package">Package</a></li>
+		   	<li><a href="about">About us</a></li>
+		   	<li><a href="view">View User's</a></li>
+
+			</ul>
+		</div>
+	</div>
+		<p class="content">
+			<br>" Explore & Book Gyms & Fitness Classes
+			<br>Created to help you live a better, happier and healthier life "<br>
+			<br>We believe fitness should be accessible to everyone, everywhere, regardless of income level or access to a gym.
+			That's why we offer full-length workout videos, the most affordable and effective workout programs on the web,
+		 	meal plans, and helpful health, nutrition and fitness information<br>
+			<br>As a member of our Gym, you’ll enjoy access to the best coaches, personal trainers, and group exercise instructors in the business.
+		 	That means access to motivating and knowledgeable experts dedicated to your success. Whatever your goal or experience level,
+			our wide range of fitness classes and offerings can help you reach your goals.
+			<br>
+		</p>
+
+		<div class="button1">
+			<a href="register" class="button" >REGISTRATION </a>
+		</div>
+	{% endblock content%}
+	</body>
+</html>
