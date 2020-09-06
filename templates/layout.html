@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+* {box-sizing: border-box;}
+
+body {font-family: Verdana, sans-serif;}
+
+img {vertical-align: middle;}
+
+
+.intro{
+  padding-top:60px;
+  padding-left:350px;
+  text-align: left;
+  font-size: 25px;
+  color:midnightblue;
+  text-decoration:bold;
+}
+
+.right{
+	position:absolute;
+	right:20px;
+	top:20px;
+	display:inline-block;
+}
+
+
+.navbar{display:inline-block;}
+
+.navbar li{
+display:inline-block;
+font size:25px;
+}
+
+.navbar li a{
+text-decoration:none;
+color:black;
+padding: 30px 20px;
+}
+
+.navbar li a:hover, .navbar li a.active{
+text-decoration:underline;
+}
+
+
+.active {
+  background-color: #717171;
+}
+
+.content{
+  text-align: center;
+  font-size: 20px;
+  color:grey;
+  text-decoration:bold;
+}
+
+.button1{
+	text-align: center;
+}
+
+.button{
+   background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 2px;
+  cursor: pointer;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+}
+</style>
+</head>
+<body>
+	<div>
+		<p class="intro"> Welcome to "ONE MORE" GYM ! </p>
+		<div class="right">
+			<ul class ="navbar">
+		   	<li><a href="home">Home</a></li>
+		   	<li><a href="register">Registration</a></li>
+	       	<li><a href="trainer">Trainer Details</a></li>
+		   	<li><a href="package">Package</a></li>
+		   	<li><a href="about">About us</a></li>
+		   	<li><a href="view">View User's</a></li>
+			</ul>
+		</div>
+	</div>
+	{% block content %}{% endblock %}
+</body>
+</html>
