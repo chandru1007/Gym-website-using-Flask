@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box;}
+
+body {font-family: Verdana, sans-serif;
+}
+
+.bg1 {
+  background-color: snow;
+  color: black;
+  margin: 20px;
+  padding: 20px;
+}
+
+.bg1 {
+  background-color: linen;
+  color: midnightblue;
+  margin: 20px;
+  padding: 20px;
+}
+
+.intro{
+  padding-left: 300px;
+  text-align: left;
+  font-size: 30px;
+  color:grey;
+  text-decoration:bold;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+table{
+  border-collapse: collapse;
+  width:75%;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+.right{
+	position:absolute;
+	right:20px;
+	top:40px;
+	display:inline-block;
+}
+
+
+.navbar{display:inline-block;}
+
+.navbar li{
+display:inline-block;
+font size:50px;
+}
+
+.navbar li a{
+text-decoration:none;
+color:tomato;
+padding: 30px 20px;
+}
+
+.navbar li a:hover, .navbar li a.active{
+text-decoration:underline;
+}
+
+.detail{
+  padding-left: 300px;
+  text-align: left;
+  font-size: 16px;
+  color:black;
+}
+
+</style>
+</head>
+
+<body>
+<div class="bg1">
+
+<p class="intro"><br>  PLEASE ! Register your Details</p>
+		<div class="right">
+			<ul class ="navbar">
+		   	<li><a href="home">Home</a></li>
+		   	<li><a href="register">Registration</a></li>
+	       	<li><a href="trainer">Trainer Details</a></li>
+		   	<li><a href="package">Package</a></li>
+		   	<li><a href="about">About us</a></li>
+		   	<li><a href="view">View User's</a></li>
+			</ul>
+		</div>
+{% block content %}
+<form action="registration_new" onsubmit="confirm('yes?');" method="POST">
+<fieldset>
+<legend>Details</legend>
+
+<div class="bg">
+
+<table border="0">
+<tr>
+	<td>Name</td>
+	<td><input type="text" name="name" pattern="[^0-9][a-z]{2,25}" placeholder = "Enter Name(small letters)" required=True></td>
+</tr>
+<tr>
+	<td>Age</td>
+	<td><input type="text" name="age" pattern="[0-9]{2}" placeholder = "Enter Age" required=True></td>
+</tr>
+<tr>
+	<td>Email</td>
+	<td><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder = "Enter Email" required=True></td>
+</tr>
+<tr>
+	<td>Phone No:</td>
+	<td><input type="text" name="phone" pattern="[789][0-9]{9}" placeholder ="Enter PhoneNumber" required=True></td>
+</tr>
+<tr>
+<td> Gender </td>
+        <td><input type="radio" name="gender" value="male" required="required">male</td>
+	<td><input type="radio" name="gender" value="female" required="required">female</td>
+</tr>
+
+<tr>
+<td> Training </td>
+	<td><input type="radio" name="training" value="Body Building" required="required">Body Building</td>
+	<td><input type="radio" name="training" value="Body Maintaining" required="required">Body Maintaining</td>
+	<td><input type="radio" name="training" value="Weight Loss" required="required">Weight Loss</td>
+</tr>
+
+<td> Package </td>
+        <td><input type="radio" name="package" value="1 month pack" required="required">1 month pack</td>
+	<td><input type="radio" name="package" value="3 month pack" required="required">3 month pack</td>
+</tr>
+
+<tr>
+	<td>Permanent Address:</td>
+	<td><textarea wrap="virtual" name="address" required=True rows=4 cols=30 maxlength=100 placeholder ="Enter Address"></textarea></td>
+</tr>
+
+<tr>
+	<td></td>
+	<td><input type="submit" value="Submit"></td>
+</tr>
+</table>
+</div>
+</fieldset>
+</form>
+{% endblock content%}
+</div>
+</body>
+</html>
