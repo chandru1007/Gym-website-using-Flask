@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.div1 {
+  border: 2px solid;
+  padding: 20px;
+  width: 300px;
+  resize: both;
+  overflow: auto;
+}
+
+* {box-sizing: border-box;}
+
+body,html{
+height:100%;
+}
+
+html{
+	background-image: url(F:/gym_new/static/images/aboutbg.jpg);
+}
+
+body {font-family: Verdana, sans-serif;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.bg {
+  background-image: url(F:/gym_new/static/images/aboutbg.jpg);
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right{
+	position:absolute;
+	right:20px;
+	top:40px;
+	display:inline-block;
+}
+
+
+.navbar{display:inline-block;}
+
+.navbar li{
+display:inline-block;
+font size:25px;
+}
+
+.navbar li a{
+text-decoration:none;
+color:black;
+padding: 30px 20px;
+}
+
+.navbar li a:hover, .navbar li a.active{
+text-decoration:underline;
+}
+
+table{
+  border-collapse: collapse;
+  width:100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 3px solid #ddd;
+}
+
+tr:hover {background-color:peachpuff;}
+
+.intro{
+  padding: 50px;
+  text-align: left;
+  font-size: 20px;
+  color:indigo;
+  text-decoration:bold;
+}
+.pack {
+  background-color: seashell;
+  color: maroon;
+  margin: 20px;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+    <div clas ="div1">
+
+	<div class="pack">
+		<p class="intro">The details of the trainer are listed below</p>
+		<div class="right">
+			<ul class ="navbar">
+		   	<li><a href="home">Home</a></li>
+		   	<li><a href="register">Registration</a></li>
+	       	<li><a href="trainer">Trainer Details</a></li>
+		   	<li><a href="package">Package</a></li>
+		   	<li><a href="about">About us</a></li>
+		   	<li><a href="view">View User's</a></li>
+			</ul>
+		</div>
+
+	{% block content %}
+
+
+		<table>
+		  <tr><th>ID</th><th>NAME</th><th>EXPERIENCE(YR)</th><th>PACKAGE ID</th><th>PHONE NUMBER</th><th>SEX</th></tr>
+		  <tr><td>G01</td><td>Griffin</td><td>1.6</td><td>E103</td><td>9876876546</td><td>Male</td></tr>
+		  <tr><td>G02</td><td>Jessy</td><td>1</td><td>E101</td><td>9872326546</td><td>Female</td></tr>
+		  <tr><td>G03</td><td>Michel</td><td>1.2</td><td>E101</td><td>9876877776</td><td>Male</td></tr>
+		  <tr><td>G04</td><td>Vertrimaran</td><td>2</td><td>E102</td><td>9876666646</td><td>Male</td> </tr>
+		  <tr><td>G05</td><td>Amirtha Iyer</td><td>1</td><td>E103</td><td>9222876546</td><td>Female</td></tr>
+		  <tr><td>G06</td><td>Jagdeesh</td><td>2.6</td><td>E103</td><td>9222876333</td><td>Male</td></tr>
+		  <tr><td>G07</td><td>Avanthika</td><td>1.2</td><td>E102</td><td>9343476333</td><td>Female</td></tr>
+		</table>
+
+	{% endblock content%}
+	</div>
+	</div>
+
+</body>
+</html>
