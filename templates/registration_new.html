@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<style>
+.head1{
+  padding-left:20%;
+}
+.center1{
+  padding-top:1%;
+  padding-left:25%;
+  font-size: 20px;
+  color:grey;
+  text-decoration:bold;
+}
+.button1{
+   text-align: center;
+}
+.button{
+  background-color: #4CAF50;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 1px 2px;
+  cursor: pointer;
+}
+
+.content{
+  text-align: center;
+  font-size: 20px;
+  color:grey;
+  text-decoration:bold;
+}
+.bg1 {
+  background-color: lightcyan;
+  color: black;
+  margin: 5px;
+  padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg1">
+<div class="head1">
+<h1>WELCOME !!</h1>
+<h3>Your DETAILS are....<h3>
+</div>
+
+<div class="center1">
+<p>{{record.name}}<p>
+<p>{{record.age}}<p>
+<p>{{record.email}}<p>
+<p>{{record.phone}}<p>
+<p>{{record.gender}}<p>
+<p>{{record.training}}<p>
+<p>{{record.package}}<p>
+<p>{{record.address}}<p>
+</div>
+
+<div class="head1">
+<h2>Welcome {{record.name}} . You have selected a {{record.package}} </h2>
+<h1>&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; THANKYOU FOR YOUR REGISTRATION !</h1>
+</div>
+
+<p class="content">
+"Explore & Book Gyms & Fitness Classes
+<br>Created to help you live a better, happier and healthier life "<br><br>
+</p>
+
+<div class="button1">
+<a href="home" class="button" >HOME</a>
+<a href="admin" class="button" >VIEW</a>
+</div>
+</div>
+</body>
+</html>
